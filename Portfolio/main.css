@@ -1,0 +1,167 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background-color: #ff5c58;
+	color: #fbf4e9;
+	height: 100vh;
+	font-family: "Ubuntu", sans-serif;
+}
+
+/* navbar start */
+#main-nav {
+	width: 100vw;
+	display: flex;
+	justify-content: flex-end;
+	background: linear-gradient(0deg, #ff5c58, #fe8f8f);
+}
+
+.nav-bar {
+	padding: 1rem;
+}
+
+.nav-item {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: end;
+	list-style: none;
+}
+
+.nav-item .nav-items {
+	padding: 1rem;
+}
+
+.nav-item .nav-items a:hover,
+.nav-item .nav-items a:active {
+	background-color: #fbf4e9;
+	color: #ff5c58;
+}
+
+.nav-item a {
+	text-decoration: none;
+	color: #fbf4e9;
+	font-size: 1.5rem;
+	padding: 1rem;
+	font-weight: 400;
+}
+/* navbar end */
+
+/* section info start */
+.info {
+	padding: 10rem;
+}
+
+.info h1 {
+	font-size: 3.5rem;
+}
+
+.info p {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	font-size: 1.2rem;
+}
+
+.info button {
+	padding: 1rem 1.5rem;
+	border: none;
+	cursor: pointer;
+	outline: inherit;
+	font-family: "Ubuntu", sans-serif;
+	border-radius: 4px;
+}
+
+.info button a {
+	text-decoration: none;
+	font-size: 1.5rem;
+	color: #ff5c58;
+}
+/* section info start */
+
+/* icon start */
+.icon {
+	margin-top: 3rem;
+	margin-bottom: 8rem;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.pro-icon {
+	font-size: 4rem;
+}
+/* icon end */
+
+/* Work start */
+.work {
+	display: grid;
+	grid-template-columns: 25% 25% 25%;
+	justify-content: center;
+	justify-items: center;
+	grid-column-gap: 2.5rem;
+	grid-row-gap: 3rem;
+	padding: 2rem;
+}
+
+.grid-item {
+	width: 20rem;
+	height: 20rem;
+	border: 0.2rem solid #fbf4e9;
+}
+/* Work end */
+.contact {
+	padding: 10rem 10rem 1rem 10rem;
+	text-align: center;
+}
+.contact h1 {
+	margin-bottom: 3.4rem;
+}
+
+.contact form {
+	display: inline-block;
+}
+
+.contact label input {
+	padding: 2rem 3rem;
+	width: 40rem;
+	margin-bottom: 2rem;
+	outline: none;
+	border: none;
+	box-shadow: none;
+	border-radius: 3px;
+	background-color: #fe8f8f;
+}
+
+.contact label input::placeholder {
+	color: #fbf4e9;
+	font-family: "Ubuntu", sans-serif;
+	font-size: 2rem;
+	text-align: justify;
+}
+
+.contact .submit {
+	padding: 1rem 1.5rem;
+	border: none;
+	cursor: pointer;
+	outline: inherit;
+	font-family: "Ubuntu", sans-serif;
+	border-radius: 4px;
+	font-size: 2rem;
+	background-color: #fbf4e9;
+	color: #ff5c58;
+	width: 14rem;
+}
+
+.social-media {
+	margin-bottom: 3rem;
+  margin-top: 6rem;
+	justify-content: space-evenly;
+	font-size: 2rem;
+}
+
+.social-media a {
+	text-decoration: none;
+  color: #fbf4e9;
+}
