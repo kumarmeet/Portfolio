@@ -1,167 +1,266 @@
 * {
-	box-sizing: border-box;
-	padding: 0;
-	margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-	background-color: #ff5c58;
-	color: #fbf4e9;
-	height: 100vh;
-	font-family: "Ubuntu", sans-serif;
+  display: flex;
+  flex-direction: row;
+  font-family: "Ubuntu", sans-serif;
+  background-color: #eaf7ff;
+  line-height: 1.3;
+  scroll-behavior: smooth;
 }
 
-/* navbar start */
-#main-nav {
-	width: 100vw;
-	display: flex;
-	justify-content: flex-end;
-	background: linear-gradient(0deg, #ff5c58, #fe8f8f);
+aside {
+  position: fixed;
+  width: 8%;
+  background-color: #3db2ff;
+  color: white;
+  z-index: 1;
 }
 
-.nav-bar {
-	padding: 1rem;
+#logo {
+  padding: 1.5rem 0;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  background-color: #159df8;
 }
 
-.nav-item {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: end;
-	list-style: none;
+#navbar {
+  height: 100vh;
+  display: flex;
+  margin-top: 2rem;
+  justify-content: center;
 }
 
-.nav-item .nav-items {
-	padding: 1rem;
+#navbar .nav-items {
+  list-style: none;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.nav-item .nav-items a:hover,
-.nav-item .nav-items a:active {
-	background-color: #fbf4e9;
-	color: #ff5c58;
+#navbar .nav-items .icon {
+  display: inline-block;
+  padding: 13px 17px;
+  width: 100%;
+  transition-duration: 0.3s;
 }
 
-.nav-item a {
-	text-decoration: none;
-	color: #fbf4e9;
-	font-size: 1.5rem;
-	padding: 1rem;
-	font-weight: 400;
-}
-/* navbar end */
-
-/* section info start */
-.info {
-	padding: 10rem;
+.fa-arrow-down {
+  margin-top: 4rem;
 }
 
-.info h1 {
-	font-size: 3.5rem;
-}
-
-.info p {
-	margin-top: 1rem;
-	margin-bottom: 1rem;
-	font-size: 1.2rem;
-}
-
-.info button {
-	padding: 1rem 1.5rem;
-	border: none;
-	cursor: pointer;
-	outline: inherit;
-	font-family: "Ubuntu", sans-serif;
-	border-radius: 4px;
-}
-
-.info button a {
-	text-decoration: none;
-	font-size: 1.5rem;
-	color: #ff5c58;
-}
-/* section info start */
-
-/* icon start */
 .icon {
-	margin-top: 3rem;
-	margin-bottom: 8rem;
-	display: flex;
-	justify-content: space-evenly;
-	align-items: center;
+  font-size: 1.2rem;
+  color: white;
 }
 
-.pro-icon {
-	font-size: 4rem;
-}
-/* icon end */
-
-/* Work start */
-.work {
-	display: grid;
-	grid-template-columns: 25% 25% 25%;
-	justify-content: center;
-	justify-items: center;
-	grid-column-gap: 2.5rem;
-	grid-row-gap: 3rem;
-	padding: 2rem;
+#hero {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.grid-item {
-	width: 20rem;
-	height: 20rem;
-	border: 0.2rem solid #fbf4e9;
-}
-/* Work end */
-.contact {
-	padding: 10rem 10rem 1rem 10rem;
-	text-align: center;
-}
-.contact h1 {
-	margin-bottom: 3.4rem;
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 70%;
+  height: 100vh;
+  flex-wrap: wrap;
 }
 
-.contact form {
-	display: inline-block;
+.pro-img img {
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
 }
 
-.contact label input {
-	padding: 2rem 3rem;
-	width: 40rem;
-	margin-bottom: 2rem;
-	outline: none;
-	border: none;
-	box-shadow: none;
-	border-radius: 3px;
-	background-color: #fe8f8f;
+.description {
+  flex-basis: 450px;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
-.contact label input::placeholder {
-	color: #fbf4e9;
-	font-family: "Ubuntu", sans-serif;
-	font-size: 2rem;
-	text-align: justify;
+.description p {
+  font-size: 1.2rem;
+  text-align: left;
 }
 
-.contact .submit {
-	padding: 1rem 1.5rem;
-	border: none;
-	cursor: pointer;
-	outline: inherit;
-	font-family: "Ubuntu", sans-serif;
-	border-radius: 4px;
-	font-size: 2rem;
-	background-color: #fbf4e9;
-	color: #ff5c58;
-	width: 14rem;
+#social {
+  display: flex;
+  justify-content: space-between;
 }
 
-.social-media {
-	margin-bottom: 3rem;
-  margin-top: 6rem;
-	justify-content: space-evenly;
-	font-size: 2rem;
+#rsm-btn {
+  background: none;
+  border-style: none;
+  border-radius: 40px;
+  background-color: #159df8;
+  width: 140px;
+  color: white;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition-duration: 0.2s;
+  padding: 1rem;
 }
 
-.social-media a {
-	text-decoration: none;
-  color: #fbf4e9;
+.social-items {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+.social-items .icon {
+  color: #159df8;
+  background-color: #f3f8fc;
+  font-size: 1.4rem;
+  transition-duration: 0.2s;
+  padding: 8px 10px;
+  border: 1px solid rgba(206, 199, 252, 0.634);
+  border-radius: 4px;
+  box-shadow: 0px 4px 6px rgba(134, 151, 168, 0.2);
+}
+
+main {
+  width: 70%;
+}
+
+#about {
+  position: relative;
+}
+
+#skills {
+  margin-top: 5rem;
+}
+
+.section-head {
+  position: relative;
+}
+
+.skills-container .skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(84px, 1fr));
+  grid-gap: 2rem;
+  justify-items: center;
+}
+
+.skills-container .skills-grid li {
+  list-style: none;
+  font-size: 2rem;
+  background-color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.4rem;
+  border: 1px solid gainsboro;
+  transition-duration: 0.2s;
+}
+
+.pro-container {
+  
+}
+
+.work-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  height: 400px;
+}
+
+.work-container .work-img {
+  overflow: hidden;
+  width: 40%;
+  height: 180px;
+  border-radius: 8px;
+}
+
+.work-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.work-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.work-description li {
+  list-style: disc inside;
+  line-height: 1.4;
+}
+
+.pro-link {
+  padding: 10px;
+  align-self: center;
+}
+
+.pro-link a {
+  margin-left: 40px;
+}
+
+/* common class */
+.card {
+  background-color: white;
+  padding: 5rem 3rem;
+  border-radius: 1rem;
+  border: 1px solid gainsboro;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.section-head {
+  margin-bottom: 54px;
+  margin-top: 54px;
+}
+
+.section-head span {
+  font-size: 0.7rem;
+  margin-left: 64px;
+  display: block;
+  padding-bottom: 20px;
+}
+
+.section-head span::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 5px;
+  width: 40px;
+  height: 1px;
+  background: #333;
+}
+
+.section-head h2 {
+  font-size: 1.5rem;
+}
+
+.about-container p {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* hovering */
+.hover-icons:hover,
+.hover-icons:active {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
