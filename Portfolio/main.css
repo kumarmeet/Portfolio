@@ -9,8 +9,6 @@ html {
 }
 
 body {
-  display: flex;
-  flex-direction: row;
   font-family: "Ubuntu", sans-serif;
   background-color: #eaf7ff;
   line-height: 1.3;
@@ -19,18 +17,21 @@ body {
 
 aside {
   position: fixed;
-  width: 8%;
   background-color: #3db2ff;
   color: white;
-  z-index: 1;
+  z-index: 10;
+  transform: translate3d(100%);
+  transition: all 0.5s ease 0s;
+  /* display: block; */
 }
 
 #logo {
-  padding: 1.5rem 0;
+  padding: 1rem;
   font-size: 2rem;
   font-weight: bold;
   text-align: center;
   background-color: #159df8;
+  margin-bottom: 4rem;
 }
 
 #navbar {
@@ -53,6 +54,7 @@ aside {
   display: inline-block;
   padding: 13px 17px;
   width: 100%;
+  border-radius: 4px;
   transition-duration: 0.3s;
 }
 
@@ -66,20 +68,23 @@ aside {
 }
 
 #hero {
-  width: 100%;
+  max-width: 1500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
+  margin-bottom: 64px;
 }
 
 header {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 70%;
+  width: 80%;
   height: 100vh;
   flex-wrap: wrap;
+  margin-left: 100px;
 }
 
 .pro-img img {
@@ -87,6 +92,7 @@ header {
   width: 250px;
   height: 250px;
   overflow: hidden;
+  box-shadow: 5px 5px 5px #81cbfc, 10px 10px 10px #8dccf7;
 }
 
 .description {
@@ -141,7 +147,8 @@ header {
 }
 
 main {
-  width: 70%;
+  width: 80%;
+  margin-left: 100px;
 }
 
 #about {
@@ -173,15 +180,21 @@ main {
   transition-duration: 0.2s;
 }
 
-.pro-container {
-  
-}
-
 .work-container {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   height: 400px;
+  border: 1px solid rgb(231, 224, 224);
+  padding: 2rem;
+  border-radius: 8px;
+  transition-duration: 0.3s;
+  margin-bottom: 4rem;
+}
+
+.work-container:hover,
+.work-container:active {
+  box-shadow: 5px 14px 28px rgba(134, 151, 168, 0.2);
 }
 
 .work-container .work-img {
@@ -209,12 +222,34 @@ main {
 }
 
 .pro-link {
-  padding: 10px;
   align-self: center;
 }
 
 .pro-link a {
   margin-left: 40px;
+  font-weight: 600;
+}
+
+/* forms */
+.contact-form form {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+.contact-form form .submit-btn {
+  justify-content: center;
+}
+
+#subjectInput,
+#messageInput {
+  grid-column: 1/-1;
+}
+
+#messageInput {
+  font-family: "Ubuntu", sans-serif;
+  padding: 20px;
 }
 
 /* common class */
@@ -223,8 +258,7 @@ main {
   padding: 5rem 3rem;
   border-radius: 1rem;
   border: 1px solid gainsboro;
-  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
-    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24);
 }
 
 .section-head {
@@ -258,9 +292,110 @@ main {
   font-weight: 600;
 }
 
+.input {
+  border: 1px solid #eee;
+  transition: all 0.2s ease-in;
+  padding: 11px 20px;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  width: 100%;
+}
+
+.input:focus {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
 /* hovering */
 .hover-icons:hover,
 .hover-icons:active {
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
     0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* media query */
+
+@media (max-width: 904px) {
+  #hero {
+    margin: 0 1rem;
+  }
+
+  .hide-aside {
+    transform: translate3d(-100%, 0px, 0px);
+    transition: all 0.5s ease 0s;
+  }
+
+  .show-menu {
+    transform: translate3d(100%);
+    transition: all 0.5s ease 0s;
+  }
+
+  header {
+    margin: 0;
+  }
+
+  main {
+    margin: 0;
+    width: 100%;
+    margin-bottom: 24px;
+  }
+  .work-container {
+    flex-direction: column;
+    height: 100%;
+    line-height: 2;
+  }
+  .work-container .work-img,
+  .work-container .work-description {
+    width: 100%;
+  }
+
+  .pro-link a {
+    padding-top: 10px;
+    margin: 4px;
+  }
+
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    padding: 2rem;
+  }
+
+  /* menu */
+  #menu-btn {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    z-index: 100;
+  }
+
+  .bar1,
+  .bar2,
+  .bar3 {
+    width: 35px;
+    height: 4px;
+    background-color: #159df8;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+
+  .change .bar2 {
+    opacity: 0;
+  }
+
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+  /* menu end */
 }

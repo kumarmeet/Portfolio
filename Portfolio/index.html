@@ -22,7 +22,13 @@
     <title>Portfolio</title>
   </head>
   <body>
-    <aside>
+    <div id="menu-btn">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+
+    <aside class="hide-aside">
       <p id="logo">MKV</p>
       <nav id="navbar">
         <ul class="nav-items">
@@ -42,12 +48,12 @@
             ></a>
           </li>
           <li>
-            <a href="#" class="icon hover-icons"
+            <a href="#projects" class="icon hover-icons"
               ><i class="fas fa-briefcase"></i
             ></a>
           </li>
           <li>
-            <a href="#" class="icon hover-icons"
+            <a href="#contact" class="icon hover-icons"
               ><i class="fas fa-phone"></i
             ></a>
           </li>
@@ -59,10 +65,7 @@
     <div id="hero">
       <header>
         <div class="pro-img">
-          <img
-            src="https://cdn.dribbble.com/users/2878951/screenshots/14013747/media/603f0b853c409547dfa51cba996f375c.png?compress=1&resize=400x300"
-            alt="pro-img"
-          />
+          <img src="/Portfolio/profile.jpg" alt="pro-img" />
         </div>
         <div class="description">
           <h4>Hello, <span style="color: #159df8">I am</span></h4>
@@ -167,7 +170,8 @@
             <span>TAKE A LOOK AT MY</span>
             <h2>PROJECTS & GITHUB REPOS</h2>
           </div>
-          <div class="pro-container card">
+          <div id="pro-container" class="card">
+            <!-- C - programming -->
             <article class="work-container">
               <div class="work-img">
                 <img src="/Portfolio/C-programming.jpg" alt="" />
@@ -177,7 +181,10 @@
                   Participated in
                   <span style="color: #159df8">Competative</span> Coding
                 </h3>
-                <h4>Got place times in weekly competition</h4>
+                <h4>
+                  Got place weekly competition in
+                  <span style="color: #159df8">C Programming</span>
+                </h4>
                 <ul>
                   <li>
                     Got <span style="color: #159df8">2nd</span> place weekly
@@ -188,19 +195,96 @@
                     competition on coder.mysirg.com (from 31 May to 05 June,
                     2021)
                   </li>
+                </ul>
+                <div class="pro-link">
+                  <a
+                    style="color: #159df8"
+                    href="https://coder.mysirg.com/certificate/fb10d77f8c0c83f042a2ec6e07a967ac"
+                    >Certificate</a
+                  >
+                  <a
+                    style="color: #159df8"
+                    href="https://github.com/kumarmeet/competative-programming-CPP-mysirg"
+                    >Repo</a
+                  >
+                  <a
+                    style="color: #159df8"
+                    href="https://www.youtube.com/watch?v=JJRCjfPI1fg&t=958s"
+                    >Youtube</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- DS & Algo Using C Programming -->
+            <article class="work-container">
+              <div class="work-img">
+                <img src="/Portfolio/c++_programming.jpg" alt="" />
+              </div>
+              <div class="work-description">
+                <h3>
+                  Participated in
+                  <span style="color: #159df8">Competative</span> Coding
+                </h3>
+                <h4>
+                  Got place weekly competition in
+                  <span style="color: #159df8"
+                    >DS & Algo using C Programming</span
+                  >
+                </h4>
+                <ul>
                   <li>
                     Got <span style="color: #159df8">2nd</span> place weekly
                     competition on coder.mysirg.com (from 12 to 17 July, 2021)
                   </li>
+                </ul>
+                <div class="pro-link">
+                  <a
+                    href="https://coder.mysirg.com/certificate/95e4d46b3049e4cc930e096204c3253d"
+                    style="color: #159df8"
+                    >Certificate</a
+                  >
+                  <a
+                    style="color: #159df8"
+                    href="https://github.com/kumarmeet/DATA-STRUCTURES-AND-ALGORITHS-COMPETATIVE-PROGRAMMING-MYSIRG"
+                    >Repo</a
+                  >
+                  <a
+                    style="color: #159df8"
+                    href="https://www.youtube.com/watch?v=RkLDpDpl4bA&t=724s"
+                    >Youtube</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- C++ Programming -->
+            <article class="work-container">
+              <div class="work-img">
+                <img src="/Portfolio/c++_programming.jpg" alt="" />
+              </div>
+              <div class="work-description">
+                <h3>
+                  Participated in
+                  <span style="color: #159df8">Competative</span> Coding
+                </h3>
+                <h4>
+                  Got place weekly competition in
+                  <span style="color: #159df8">C++ Programming & OOPS</span>
+                </h4>
+                <ul>
                   <li>
-                    <a
-                      href="https://coder.mysirg.com/certificate/fb10d77f8c0c83f042a2ec6e07a967ac"
-                      style="color: #159df8"
-                      >Certificate</a
-                    >
+                    Got <span style="color: #159df8">2nd</span> place weekly
+                    competition on coder.mysirg.com (from 05 to 11 September,
+                    2021)
                   </li>
                 </ul>
                 <div class="pro-link">
+                  <a
+                    href="https://coder.mysirg.com/certificate/fe48ab88939b4c52498acc9b40184ed3"
+                    style="color: #159df8"
+                    >Certificate</a
+                  >
                   <a
                     style="color: #159df8"
                     href="https://github.com/kumarmeet/competative-programming-c-mysirg"
@@ -208,13 +292,62 @@
                   >
                   <a
                     style="color: #159df8"
-                    href="https://www.youtube.com/watch?v=JJRCjfPI1fg&t=958s"
-                    >Video Link</a
+                    href="https://www.youtube.com/watch?v=UloYqoQpRFA&t=877s"
+                    >Youtube</a
                   >
                 </div>
               </div>
             </article>
           </div>
+        </section>
+
+        <!-- contact -->
+        <section id="contact">
+          <div class="section-head">
+            <span>SAY HELLO</span>
+            <h2>CONTACT</h2>
+          </div>
+          <article class="card">
+            <h3>Get in Touch</h3>
+            <div class="contact-form">
+              <form action="POST">
+                <input
+                  type="text"
+                  id="nameInput"
+                  name="nameInput"
+                  class="nameInput input"
+                  required=""
+                  placeholder="Your Name*"
+                />
+                <input
+                  type="text"
+                  id="emailInput"
+                  name="emailInput"
+                  class="emailInput input"
+                  required=""
+                  placeholder="Your Email*"
+                />
+                <input
+                  type="text"
+                  id="subjectInput"
+                  name="subjectInput"
+                  class="subjectInput input"
+                  required=""
+                  placeholder="Your Subject*"
+                />
+                <textarea
+                  class="messageInput input"
+                  name="messageInput"
+                  id="messageInput"
+                  required=""
+                  placeholder="Your Message*"
+                ></textarea>
+                <button id="rsm-btn" class="submit-btn hover-icons">
+                  Submit
+                </button>
+              </form>
+            </div>
+          </article>
         </section>
       </main>
     </div>
