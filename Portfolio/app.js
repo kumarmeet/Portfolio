@@ -13,3 +13,8 @@ window.addEventListener("scroll", () => {
   aside.classList.add("hide-aside");
   menuBtn.classList.remove("change");
 });
+
+//refresh page scroll to top of the page
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+};
