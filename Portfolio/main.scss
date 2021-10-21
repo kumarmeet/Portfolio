@@ -139,21 +139,23 @@ aside {
     justify-content: space-evenly;
 
     @media (max-width: 904px) {
-      .description h1,
-      .description h2,
-      .description h4,
-      .description p {
+      h1,
+      h2,
+      h4,
+      p {
         text-align: center;
       }
     }
 
     p {
-      font-size: $--default-font-size + 0.2;
       text-align: left;
-      @media (max-width: 904px) {
-        p {
-          margin-bottom: 24px;
-        }
+      font-size: $--default-font-size + 0.2;
+    }
+
+    @media (max-width: 904px) {
+      p {
+        text-align: center;
+        margin-bottom: 24px;
       }
     }
   }
@@ -244,7 +246,7 @@ main {
 
     @media (max-width: 904px) {
       text-align: center;
-      margin: 40px 0;
+      margin: 60px 0 24px 0;
 
       span {
         margin: 0;
@@ -451,4 +453,32 @@ main {
     transform: rotate(45deg) translate(-8px, -8px);
   }
   /* menu end */
+}
+
+/* c-programming section youtube link */
+
+#multiple-pos {
+  position: relative;
+  div {
+    height: 100px;
+    position: absolute;
+    bottom: 15px;
+    left: -84px;
+    z-index: 100;
+    color: #ffffff;
+
+    ul li {
+      list-style-type: none;
+      margin-bottom: 0.5rem;
+
+      a:hover {
+        color: #fff;
+      }
+    }
+  }
+  .card {
+    padding-top: 1.4rem;
+    width: 240px;
+    background-color: rgba(159, 208, 250, 0.9);
+  }
 }
