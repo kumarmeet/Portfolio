@@ -5,6 +5,7 @@
     <%- include("includes/hamburger") %> 
     <%- include("includes/aside") %>
     <div id="hero">
+      <div class="" id="modal"></div>
       <header>
         <div class="pro-img">
           <img src="/profile-img/profile.jpg" alt="pro-img" />
@@ -147,9 +148,10 @@
             <h2>CONTACT</h2>
           </div>
           <article class="card">
-            <h3>Get in Touch</h3>
+            <h3 >Get in Touch</h3>
             <div class="contact-form">
-              <form method="/" action="POST">
+              <!-- form -->
+              <form id="form" action="/" method="POST">
                 <input
                   type="text"
                   id="nameInput"
@@ -159,7 +161,7 @@
                   placeholder="Your Name*"
                 />
                 <input
-                  type="text"
+                  type="email"
                   id="emailInput"
                   name="emailInput"
                   class="emailInput input"
